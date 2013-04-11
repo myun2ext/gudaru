@@ -25,6 +25,7 @@ end
 
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'knockout-rails'
 
 group :development do
