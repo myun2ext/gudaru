@@ -23,8 +23,16 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.3.1.0'
 end
 
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'knockout-rails'
+
+group :development do
+  gem 'html2haml'
+end
+
+group :development, :test do
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
