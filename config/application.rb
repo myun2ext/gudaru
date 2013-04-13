@@ -58,5 +58,11 @@ module Gudaru
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Twitter
+    config.twitter_login = Twitter::Login.new(
+      consumer_key: ENV['GUDARU_TWITTER_CONSUMER_KEY'],
+      secret:  ENV['GUDARU_TWITTER_CONSUMER_SECRET']
+    )
   end
 end
