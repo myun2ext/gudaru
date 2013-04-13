@@ -5,13 +5,13 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    %meta{ name: :viewport, content: "width=device-width,user-scalable=no,maximum-scale=1" }
+    %meta{ name: :viewport,
+      content: "width=device-width,user-scalable=no,maximum-scale=1" }
 
   %body
     = render "layouts/header"
 
     %section#main
-      aaa
       = yield
 
     = render "layouts/footer"
