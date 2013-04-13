@@ -52,4 +52,5 @@ gem 'haml-rails'
 # gem 'debugger'
 
 gem 'twitter'
+gem 'twitter-login'
 gem 'devise'
