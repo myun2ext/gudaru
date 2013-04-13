@@ -13,18 +13,31 @@
  */
 
 @import "bootstrap"
+//@import "bootstrap-responsive"
+
+$screen_small: "screen and (max-width: 519px)"
+$screen_middle: "screen and (min-width: 520px)"
+$screen_large: "screen and (min-width: 769px)"
 
 header
   .navbar
     .navbar-inner
-      @media screen and (min-width: 520px)
+      @media #{$screen_middle}
         .brand
           font-size: 32px
           line-height: 26px
           margin-left: -16px
 
-      @media screen and (min-width: 769px)
+      @media #{$screen_large}
         .brand
           font-size: 60px
           line-height: 32px
           margin-left: -16px
+
+section#main
+  @media #{$screen_small}
+    padding-top: 40px
+  @media #{$screen_middle}
+    padding-top: 50px
+  @media #{$screen_large}
+    padding-top: 60px
