@@ -65,5 +65,13 @@ module Gudaru
       consumer_key: ENV['GUDARU_TWITTER_CONSUMER_KEY'],
       secret:  ENV['GUDARU_TWITTER_CONSUMER_SECRET']
     )
+
+    # Twitter Profile Image Temporary Directory create...
+    Dir::mkdir("tmp") unless Dir.exists?("tmp")
+    Dir::mkdir("tmp/twitter_profile_image")          unless Dir.exists?("tmp/twitter_profile_image")
+    Dir::mkdir("tmp/twitter_profile_image/bigger")   unless Dir.exists?("tmp/twitter_profile_image/bigger")
+    Dir::mkdir("tmp/twitter_profile_image/normal")   unless Dir.exists?("tmp/twitter_profile_image/normal")
+    Dir::mkdir("tmp/twitter_profile_image/mini")     unless Dir.exists?("tmp/twitter_profile_image/mini")
+    Dir::mkdir("tmp/twitter_profile_image/original") unless Dir.exists?("tmp/twitter_profile_image/original")
   end
 end
