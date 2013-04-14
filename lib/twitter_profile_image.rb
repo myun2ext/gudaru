@@ -1,9 +1,10 @@
 #
+# Twitter Profile Image Library (auto Cache)
+#
 # API Document Reference:
 #   https://dev.twitter.com/docs/api/1/get/users/profile_image/%3Ascreen_name
 #
 require 'open-uri'
-
 class TwitterProfileImage
   def self.image_save_path params
     #"tmp/twitter_prifle_image/#{params[:size]}/#{params[:screen_name]}"
