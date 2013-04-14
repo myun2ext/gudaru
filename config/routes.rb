@@ -12,4 +12,5 @@ Gudaru::Application.routes.draw do
   #mount twitter_endpoint => 'logout', :as => :twitter_logout
 
   match "/logout" => "home#logout"
+  match "/twitter_profile_image/:screen_name" => "home#twitter_profile_image"
 end
