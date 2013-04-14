@@ -82,6 +82,7 @@ GEM
     multi_json (1.7.2)
     multipart-post (1.1.5)
     oauth (0.4.7)
+    open_uri_redirections (0.1.1)
     orm_adapter (0.4.0)
     pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
@@ -160,6 +161,7 @@ DEPENDENCIES
   haml-rails
   html2haml
   jquery-rails
+  open_uri_redirections
   pg
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)

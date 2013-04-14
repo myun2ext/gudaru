@@ -2,7 +2,7 @@
 # API Document Reference:
 #   https://dev.twitter.com/docs/api/1/get/users/profile_image/%3Ascreen_name
 #
-require 'open_uri_redirectable_patch.rb'
+require 'open-uri'
 
 class TwitterProfileImage
   def self.image_save_path params
@@ -29,19 +29,12 @@ class TwitterProfileImage
     local_path = TwitterProfileImage.image_save_path(screen_name: screen_name, size: size, format: format)
 
     unless File.exists?(local_path)
-      File.open(local_path, 'w') do |output|
+      File.open(local_path, 'w+b') do |output|
         url = TwitterProfileImage.url(screen_name: screen_name, size: size, format: format)
-        open(url) do |input|
+        open(url, :allow_redirections => :safe) do |input|
           output << input.read
         end
       end
-    end
-  end
-
-  def redirectable_open(name, *rest, &block)
-    begin
-      open(name, *rest, &block)
-    rescue 
     end
   end
 end
