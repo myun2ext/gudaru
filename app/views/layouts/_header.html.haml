@@ -2,3 +2,6 @@
   %nav.navbar.navbar-inverse.navbar-fixed-top
     .navbar-inner
       = link_to app_name, root_path, class: :brand
+
+      %ul.nav.pull-right
+        %li= link_to t :signin#, sign_in_path
