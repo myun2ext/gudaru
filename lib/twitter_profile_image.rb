@@ -2,7 +2,7 @@
 # API Document Reference:
 #   https://dev.twitter.com/docs/api/1/get/users/profile_image/%3Ascreen_name
 #
-require 'open-uri'
+require 'open_uri_redirectable_patch.rb'
 
 class TwitterProfileImage
   def self.image_save_path params
@@ -35,6 +35,13 @@ class TwitterProfileImage
           output << input.read
         end
       end
+    end
+  end
+
+  def redirectable_open(name, *rest, &block)
+    begin
+      open(name, *rest, &block)
+    rescue 
     end
   end
 end
