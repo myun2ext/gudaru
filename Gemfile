@@ -52,6 +52,10 @@ gem 'haml-rails'
 # To use debugger
 # gem 'debugger'
 
+# Memcached
+gem 'dalli'
+
+# Twitter / User Login
 gem 'twitter'
 gem 'twitter-login'
 gem 'devise'
