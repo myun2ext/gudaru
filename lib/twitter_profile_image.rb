@@ -16,6 +16,10 @@ class TwitterProfileImage
     "http://api.twitter.com/1/users/profile_image/#{params[:screen_name]}.#{params[:format]}?size=#{params[:size]}"
   end
 
+  def self.image_cache_name params
+    "twitter_profile_image.#{params[:screen_name]}.#{params[:format]}.#{params[:size]}"
+  end
+
   #
   # load to file by screen_name
   #
@@ -39,7 +43,7 @@ class TwitterProfileImage
     end
   end
 
-  def read(screen_name, size=:normal, format=:png)
+  def read_by_file(screen_name, size=:normal, format=:png)
     local_path = TwitterProfileImage.image_save_path(screen_name: screen_name, size: size, format: format)
 
     unless File.exists?(local_path)
@@ -48,6 +52,18 @@ class TwitterProfileImage
 
     File.open(local_path, 'r+b') do |reader|
       reader.read
+    end
+  end
+
+  def read(screen_name, size=:normal, format=:png)
+    case config.twitter_profile_image[:cache_type]
+    when :rails_cache
+      cache_key = TwitterProfileImage.image_cache_name(screen_name: screen_name, size: size, format: format)
+      Rails.cache.fetch(cache_key) do
+        
+      end
+    else
+      read_by_file(screen_name, size, format)
     end
   end
 end
