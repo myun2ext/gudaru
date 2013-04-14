@@ -1,4 +1,7 @@
 Gudaru::Application.routes.draw do
+  resources :channels
+
+
   root to: 'home#index'
 
   resources :users
