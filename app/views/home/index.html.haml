@@ -1,1 +1,16 @@
-= link_to 'New User', new_user_path
+%h1 Hello!!! Gudaru
+
+%ul
+  %li= link_to 'New User', new_user_path
+  %li= link_to 'New Channel', new_channel_path
+
+%h2 Channels
+%table
+  - Channel.all.each do |channel|
+    %tr
+      %td= channel.name
+      %td= link_to 'Show', channel
+      %td= link_to 'Edit', edit_channel_path(channel)
+      %td= link_to 'Destroy', channel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
