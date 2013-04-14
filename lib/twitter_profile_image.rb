@@ -37,4 +37,16 @@ class TwitterProfileImage
       end
     end
   end
+
+  def read(screen_name, size=:normal, format=:png)
+    local_path = TwitterProfileImage.image_save_path(screen_name: screen_name, size: size, format: format)
+
+    unless File.exists?(local_path)
+      load(screen_name, size, format)
+    end
+
+    File.open(local_path, 'r+b') do |reader|
+      reader.read
+    end
+  end
 end
