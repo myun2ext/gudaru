@@ -1,4 +1,4 @@
 - unless logged_in?
   %li= link_to twitter_bird_image + t(:signin), "/sign_in" #, sign_in_path
 - else
-  %li= link_to loggedin_twitter_profile_image(size: :mini) + " " + loggedin_name + ' Logout', logout_path
+  %li= link_to loggedin_icon(size: :mini) + " " + loggedin_name + ' Logout', logout_path

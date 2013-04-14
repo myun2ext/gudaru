@@ -7,7 +7,7 @@ module TwitterHelper
     image_tag("/twitter_profile_image/#{screen_name}?size=#{options[:size]}")
   end
 
-  def loggedin_twitter_profile_image(options = {size: :normal})
+  def loggedin_icon(options = {size: :normal})
     twitter_profile_image(@twitter_user.screen_name, options)
   end
 
