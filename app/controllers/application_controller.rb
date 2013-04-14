@@ -7,4 +7,9 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :logged_in?
+
+  def logout
+    twitter_logout
+    redirect_to root_url
+  end
 end

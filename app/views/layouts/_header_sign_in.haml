@@ -1,0 +1,4 @@
+- unless logged_in?
+  %li= link_to image_tag("twitter-bird-light-bgs.png", size: "26x26") + t(:signin), "/sign_in" #, sign_in_path
+- else
+  %li= link_to 'Logout', logout_path
