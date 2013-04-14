@@ -66,6 +66,11 @@ module Gudaru
       secret:  ENV['GUDARU_TWITTER_CONSUMER_SECRET']
     )
 
+    # TwitterProfileImage Settings
+    config.twitter_profile_image = {
+      cache_type: :rails_cache
+    }
+
     # Twitter Profile Image Temporary Directory create...
     Dir::mkdir("tmp") unless Dir.exists?("tmp")
     Dir::mkdir("tmp/twitter_profile_image")          unless Dir.exists?("tmp/twitter_profile_image")

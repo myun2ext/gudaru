@@ -56,12 +56,15 @@ class TwitterProfileImage
   end
 
   def read(screen_name, size=:normal, format=:png)
-    case config.twitter_profile_image[:cache_type]
+    case Gudaru::Application.config.twitter_profile_image[:cache_type]
+
     when :rails_cache
       cache_key = TwitterProfileImage.image_cache_name(screen_name: screen_name, size: size, format: format)
       Rails.cache.fetch(cache_key) do
-        
+        url = TwitterProfileImage.url(screen_name: screen_name, size: size, format: format)
+        open(url, :allow_redirections => :safe).read
       end
+
     else
       read_by_file(screen_name, size, format)
     end
