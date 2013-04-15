@@ -19,14 +19,24 @@ $screen_small: "screen and (max-width: 519px)"
 $screen_middle: "screen and (min-width: 520px)"
 $screen_large: "screen and (min-width: 769px)"
 
+@media #{$screen_small}
+  .navbar .nav > li > a
+    padding: 9px 10px
+
 header
   .navbar
     .navbar-inner
+      
       @media #{$screen_middle}
         .brand
           font-size: 32px
           line-height: 26px
           margin-left: -16px
+
+        li
+          font-size: 14px
+          font-weight: bolder
+          padding: 4px 6px
 
       @media #{$screen_large}
         .brand
@@ -34,10 +44,10 @@ header
           line-height: 32px
           margin-left: -16px
 
-      li
-        font-size: 14px
-        font-weight: bolder
-        padding: 4px 6px
+        li
+          font-size: 14px
+          font-weight: bolder
+          padding: 4px 6px
 
 section#main
   @media #{$screen_small}
