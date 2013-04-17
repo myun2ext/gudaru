@@ -1,4 +1,4 @@
-gudaru
+Gudaru
 ======
 
-Gudaru!
+**Gudaru** is channeled Sosial Talking Service.
