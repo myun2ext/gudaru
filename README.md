@@ -1,4 +1,4 @@
 Gudaru
 ======
 
-**Gudaru** is channeled Sosial Talking Service.
+**Gudaru** is **Channelized Social Talking Service**.
