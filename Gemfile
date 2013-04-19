@@ -34,6 +34,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'composite_primary_keys'
+
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'knockoutjs-rails'
