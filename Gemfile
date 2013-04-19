@@ -39,6 +39,7 @@ gem 'composite_primary_keys'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'knockoutjs-rails'
+gem 'em-websocket'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
