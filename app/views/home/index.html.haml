@@ -1,7 +1,8 @@
 %h1 Hello!!! Gudaru
 
-%ul
-  %li= link_to t(:new_channel), new_channel_path
+- if logged_in?
+  %ul
+    %li= link_to t(:new_channel), new_channel_path
 
 %h2 Channels
 %table
