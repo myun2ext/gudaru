@@ -1,7 +1,9 @@
 class Message < ActiveRecord::Base
+  set_primary_keys :channel_id, :id
+
   belongs_to :user
   belongs_to :channel
-  attr_accessible :body
+  attr_accessible :user, :channel, :body
 
   # Validations
   validates :user,    :presence => true
