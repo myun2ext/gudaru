@@ -3,6 +3,7 @@ class Message < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :channel
+  belongs_to :parent, :class_name => "Message"
   attr_accessible :user, :channel, :body
 
   # Validations
