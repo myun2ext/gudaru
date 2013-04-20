@@ -1,7 +1,7 @@
 Gudaru::Application.routes.draw do
-  resources :messages
-
-  resources :channels
+  resources :channels do
+    resources :messages
+  end
 
   resources :users
 
