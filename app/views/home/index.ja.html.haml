@@ -1,11 +1,12 @@
 :markdown
   # ようこそ、#{app_name} へ!!!
-  
+
   **#{app_name}** は、何かについて、話したり、ぐだったりするサービスです。
-  
-&raquo;
-= link_to '詳しく見る', guidance_path
-&laquo;
+
+-#
+  &raquo;
+  = link_to '詳しく見る', guidance_path
+  &laquo;
 
 - if logged_in?
   %ul
