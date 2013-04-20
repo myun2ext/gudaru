@@ -32,14 +32,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'bootstrap-sass', '~> 2.3.1.0'
-
 gem 'composite_primary_keys'
 
-gem 'jquery-rails'
 gem 'haml-rails'
+gem 'redcarpet'   # for Markdown writing
+
+gem 'jquery-rails'
 gem 'knockoutjs-rails'
 gem 'em-websocket'
+
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
