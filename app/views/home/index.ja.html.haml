@@ -1,0 +1,16 @@
+%h1 ようこそ!!! Gudaru
+
+- if logged_in?
+  %ul
+    %li= link_to t(:new_channel), new_channel_path
+
+%h2 Channels
+%table
+  - Channel.all.each do |channel|
+    %tr
+      %td= channel.name
+      %td= link_to 'Show', channel
+      %td= link_to 'Edit', edit_channel_path(channel)
+      %td= link_to 'Destroy', channel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
