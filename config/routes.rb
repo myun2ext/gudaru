@@ -1,4 +1,6 @@
 Gudaru::Application.routes.draw do
+  resource :guidance
+
   resources :channels do
     resources :messages
   end
@@ -12,7 +14,8 @@ Gudaru::Application.routes.draw do
   twitter_endpoint = twitter.login_handler(:return_to => '/')
   mount twitter_endpoint => 'sign_in', :as => :login
   #mount twitter_endpoint => 'logout', :as => :twitter_logout
-
   match "/logout" => "home#logout"
   match "/twitter_profile_image/:screen_name" => "home#twitter_profile_image"
+
+  #match '*other' => 'channels#by_short_name'
 end
