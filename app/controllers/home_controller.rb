@@ -10,4 +10,8 @@ class HomeController < ApplicationController
 
     send_data(image_data, :disposition => "inline", :type => "image/png")
   end
+
+  def logged_in
+    redirect_to '/'
+  end
 end
