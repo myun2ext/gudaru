@@ -1,2 +1,0 @@
-class GuidanceController < ApplicationController
-end
