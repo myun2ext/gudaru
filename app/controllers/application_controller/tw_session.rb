@@ -18,10 +18,14 @@ class ApplicationController
       end
  
       def user
-        User.find_by_screen_name tw_account["screen_name"]
+        #session[:user] = User.find_by_screen_name tw_account["screen_name"]
+        session[:user] = User.find_by_twitter_user_id tw_account["id"]
       end
       def tw_first?
         !!user
+      end
+      def logged_in
+        session[:user]
       end
  
       def logout

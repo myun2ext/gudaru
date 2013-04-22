@@ -41,6 +41,7 @@ class ChannelsController < ApplicationController
   # POST /channels.json
   def create
     @channel = Channel.new(params[:channel])
+    @channel.owner = logged_in
 
     respond_to do |format|
       if @channel.save

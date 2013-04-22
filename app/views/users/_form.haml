@@ -24,5 +24,10 @@
     = f.label :screen_name
     = f.text_field :screen_name
 
+  .field
+    = f.label :twitter_profile_image
+    = image_tag("/twitter_profile_image/#{screen_name}?size=normal")
+
+
   .actions
     = f.submit
