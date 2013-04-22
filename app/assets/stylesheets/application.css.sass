@@ -23,6 +23,12 @@ $screen_large: "screen and (min-width: 769px)"
   .navbar .nav > li > a
     padding: 9px 10px 3px
 
+@mixin _radius($rad: 6px, $pad: 24px)
+  padding: $pad
+  -webkit-border-radius: $rad
+  -moz-border-radius: $rad
+  border-radius: $rad
+
 header
   .navbar
     .navbar-inner
@@ -50,13 +56,43 @@ header
           font-weight: bolder
           padding: 4px 6px
 
+footer
+  .navbar
+    .navbar-inner
+      opacity: 0.03
+      $footer_hover_tansition_time: 0.2s
+      -o-transition: $footer_hover_tansition_time
+      -ms-transition: $footer_hover_tansition_time
+      -moz-transition: $footer_hover_tansition_time
+      -webkit-transition: $footer_hover_tansition_time
+      transition: $footer_hover_tansition_time
+
+    .navbar-inner:hover
+      opacity: 0.87
+      $footer_hover_tansition_time: 0.5s
+      -o-transition: $footer_hover_tansition_time
+      -ms-transition: $footer_hover_tansition_time
+      -moz-transition: $footer_hover_tansition_time
+      -webkit-transition: $footer_hover_tansition_time
+      transition: $footer_hover_tansition_time
+
 section#main
+  padding: 6px
   @media #{$screen_small}
     padding-top: 40px
   @media #{$screen_middle}
     padding-top: 50px
   @media #{$screen_large}
     padding-top: 60px
+
+  .main-container
+    background-color: #fdfdfd
+    @include _radius(12px, 20px)
+    //@extend .container
+
+    margin-right: auto
+    margin-left: auto
+    max-width: 1000px
 
 
 // link hover fade effect.
