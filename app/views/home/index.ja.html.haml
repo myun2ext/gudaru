@@ -8,11 +8,14 @@
   = link_to '詳しく見る', guidance_path
   &laquo;
 
+
+
+%h2= t :channels
+
 - if logged_in?
   %ul
     %li= link_to t(:new_channel), new_channel_path
 
-%h2 Channels
 %table
   - Channel.all.each do |channel|
     %tr

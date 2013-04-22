@@ -1,3 +1,5 @@
 ja:
   signin: "Twitterでログイン"
   logout: "ログアウト"
+  channels: "チャンネル一覧"
+  new_channel: "新しくチャンネルを作る!!"
