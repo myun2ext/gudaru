@@ -3,3 +3,13 @@ ja:
   logout: "ログアウト"
   channels: "チャンネル一覧"
   new_channel: "新しくチャンネルを作る!!"
+
+  activerecord:
+    models:
+      user: ユーザ
+    attributes:
+      user:
+        id: ID
+        twitter_user_id: TwitterユーザID
+        name: 名前
+        screen_name: ユーザ名

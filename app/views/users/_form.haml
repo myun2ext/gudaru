@@ -7,11 +7,22 @@
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
+
+  .field
+    = f.label :id
+    = @user.id
+
+  .field
+    = f.label :twitter_user_id
+    = @user.twitter_user_id
+
   .field
     = f.label :name
     = f.text_field :name
+
   .field
     = f.label :screen_name
     = f.text_field :screen_name
+
   .actions
     = f.submit
