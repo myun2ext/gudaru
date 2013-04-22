@@ -24,7 +24,11 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
-    @user = User.new
+    @user = User.new(
+      twitter_user_id: tw_account["id"],
+      name: tw_account["name"],
+      screen_name: tw_account["screen_name"]
+    )
 
     respond_to do |format|
       format.html # new.html.erb
