@@ -56,6 +56,26 @@ header
           font-weight: bolder
           padding: 4px 6px
 
+footer
+  .navbar
+    .navbar-inner
+      opacity: 0.03
+      $footer_hover_tansition_time: 0.2s
+      -o-transition: $footer_hover_tansition_time
+      -ms-transition: $footer_hover_tansition_time
+      -moz-transition: $footer_hover_tansition_time
+      -webkit-transition: $footer_hover_tansition_time
+      transition: $footer_hover_tansition_time
+
+    .navbar-inner:hover
+      opacity: 0.87
+      $footer_hover_tansition_time: 0.5s
+      -o-transition: $footer_hover_tansition_time
+      -ms-transition: $footer_hover_tansition_time
+      -moz-transition: $footer_hover_tansition_time
+      -webkit-transition: $footer_hover_tansition_time
+      transition: $footer_hover_tansition_time
+
 section#main
   padding: 6px
   @media #{$screen_small}
@@ -67,7 +87,7 @@ section#main
 
   .main-container
     background-color: #fdfdfd
-    @include _radius(12px, 24px)
+    @include _radius(12px, 20px)
     //@extend .container
 
     margin-right: auto
