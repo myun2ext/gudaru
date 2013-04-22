@@ -23,6 +23,12 @@ $screen_large: "screen and (min-width: 769px)"
   .navbar .nav > li > a
     padding: 9px 10px 3px
 
+@mixin _radius($rad: 6px, $pad: 24px)
+  padding: $pad
+  -webkit-border-radius: $rad
+  -moz-border-radius: $rad
+  border-radius: $rad
+
 header
   .navbar
     .navbar-inner
@@ -51,6 +57,7 @@ header
           padding: 4px 6px
 
 section#main
+  padding: 6px
   @media #{$screen_small}
     padding-top: 40px
   @media #{$screen_middle}
@@ -59,11 +66,13 @@ section#main
     padding-top: 60px
 
   .main-container
+    background-color: #fdfdfd
+    @include _radius(12px, 24px)
     //@extend .container
 
     margin-right: auto
     margin-left: auto
-    max-width: 1200px
+    max-width: 1000px
 
 
 // link hover fade effect.
